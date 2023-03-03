@@ -50,7 +50,8 @@ function creatDot_selected () {
 	contaner.appendChild(newP);
 };
 
-  
+
+ 
 
 
 
@@ -69,3 +70,31 @@ for (var i = 0; i < slides.length; i++) {
   // changment dimage 
 
 
+  // changment dimage 
+
+
+
+
+  let currentImageIndex = 0;
+
+
+//boucle suivant
+
+suivant.addEventListener("click", function () {
+if(currentImageIndex > slides.length ){
+	currentImageIndex = 0 ;}
+	
+  currentImageIndex = (currentImageIndex + 1); 
+  const images = document.querySelector(".banner-img").src = slides[currentImageIndex].image ;
+  
+	
+});
+
+//boucle precedent
+	
+
+
+	precedent.addEventListener("click", function () {
+		currentImageIndex = (currentImageIndex - 1 + slides.length) % slides.length;
+	const images = document.querySelector(".banner-img").src = slides[currentImageIndex].image ;
+  });
